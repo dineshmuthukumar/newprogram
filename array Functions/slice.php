@@ -6,34 +6,22 @@ $array = array(array(
   '3' => '3'),array('a','b','c','d'),array('A','B','C','D')
 );
 $element=array('apple','banana','orange');
-foreach ($array as $key => $value) {
+echo"<pre>";
+print_r($array);
 
-	if($key[1]==1){
-	    array_push($key, "hello World");
-	    }
-
+$result1 = array_slice($array[0], 0, 0, true) +array('apple');
+ $result11  = array_slice($array[0], 0, count($array[0]) , true) ;
+ $result12=array_merge($result1,$result11);
+$result2 = array_slice($array[1], 0, 1, true) +
+        array("1"=>"banana");
+$result21  = array_slice($array[1], 1, count($array[1]) , true) ;
+$result22 =array_merge($result2,$result21);
+$result3= array_slice($array[2], 0, 2, true) +
+    array("2"=>"orange");
+   $result31= array_slice($array[2], 2, count($array[2]) , true) ;
+   $result32=array_merge($result3,$result31);
+ $mergearray=array($result12,$result22,$result32);
  echo "<pre>";
-	print_r($array[$key]);
-	if($array[$key]=)
-	exit;//array_splice_after_key($array, 'one', $element);
-$arr= array_splice($array[$key],0,1,$a2);
-print_r($arr);
-//	insert_into_array( $array, 0, $element[$key], true);
-	//array_slice($array, 0, $element[i], true);
-//print_r($array);
-}
-
-/*$res = array_slice($array[0], 0, 0, true) +array('apple');
-    array_slice($array[0], 0, count($array[0]) , true) ;
-$res1 = array_slice($array[1], 0, 1, true) +
-        array("1"=>"banana") +
-        array_slice($array[1], 0, count($array[1]) , true) ;
-//print_r($res1);
-$res2 = array_slice($array[2], 0, 2, true) +
-    array("2"=>"orange") +
-    array_slice($array[2], 0, count($array[2]) , true) ;
- $mergearray=array($res,$res1,$res2);
- echo "<pre>";
-print_r($mergearray);*/
+print_r($mergearray);
 
 ?>

@@ -38,8 +38,8 @@ print_r($c)."<br>";
 echo "array count values are display";
 print_r(array_count_values($a)); //count values of array
 
-$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
-$a2=array("e"=>"red","f"=>"green","g"=>"blue");
+$array1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+$array2=array("e"=>"red","f"=>"green","g"=>"blue");
 
 echo "combine two array differentie element display"."<br>";
 $result=array_diff($a1,$a2); // combine array and differentie array value & key in 
