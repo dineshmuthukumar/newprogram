@@ -57,39 +57,68 @@ input[type=submit]:hover {
 		 <center> 
 	   <table>
             <h1>Enter Your Details</h1>
+<<<<<<< HEAD
 		 <tr> <td>FirstName</td> <td><input type='text' name="Firstname" placeholder="Enter the First_name....." /></td></tr>
          <tr> <td>LastName</label></td><td> <input type="text"  name="Lastname" placeholder="Enter the Lastname...." /> </td></tr>
+=======
+		 <tr> <td>FirstName</td> <td><input type='text' name="Firstname" placeholder="Enter the First_name....." value='<?php echo $Firstname_rename ?>'/></td></tr>
+         <tr> <td>LastName</label></td><td> <input type="text"  name="Lastname" placeholder="Enter the Lastname...." value="<?php echo $Lastname_rename ?>"/> </td></tr>
+>>>>>>> dc58f877b6542fefd85b5e30f84fc2073e8a8d7e
 
           <tr><td>Select a profile_file:</td><td> <input type="file" name="myFile"></td> </tr>
           <tr><td> Gender: </td><td> <input type="radio" name="gender"  value="male" >  male
                                      <input type="radio"  name="gender" value="female"> female </td> </tr>
+<<<<<<< HEAD
         <tr><td>  Born Dater: </td> <td> <input type="date" name="borndate" max=2 Placeholder="03-01-1996"/> </td></tr>
                                      
           <tr> <td> Address: </td> <td> <textarea rows="4" cols="50" name="Address" />
                                        </textarea></td> </tr>
             <tr> <td>City: </td><td> <select name="City" />
+=======
+        <tr><td>  Born Dater: </td> <td> <input type="date" name="borndate" max=2 Placeholder="03-01-1996"value="<?php echo $Borndate_rename?>" /> </td></tr>
+                                     
+          <tr> <td> Address: </td> <td> <textarea rows="4" cols="50" name="Address" value="<?php $echo $Address_rename ?>"/>
+                                       </textarea></td> </tr>
+            <tr> <td>City: </td><td> <select name="City" value="<?php echo$City_rename> ?>"/>
+>>>>>>> dc58f877b6542fefd85b5e30f84fc2073e8a8d7e
             <option value="NULL"></option>
             <option value="chennai">Chennai</option>
             <option value="madurai">Madurai</option>
             <option value="Trichy">Trichy</option>
             <option value="Virudhunagar">Virudhunagar</option> 
                </select> </td></tr>
+<<<<<<< HEAD
                 <tr> <td>State: </td><td> <select name="State" />
+=======
+                <tr> <td>State: </td><td> <select name="State" value="<?php echo $State_rename> ?>"/>
+>>>>>>> dc58f877b6542fefd85b5e30f84fc2073e8a8d7e
                     <option value="NULL"></option>
                  <option value="Tamil_nadu">Tamil_nadu</option>
                  <option value="Karnataka">Karnataka</option>
                  <option value="Andra Pradesh">Andra_pradesh</option>
                  <option value="Kerala">Kerala</option> 
                     </select> </td></tr>
+<<<<<<< HEAD
 		 <tr><td>  country : </td><td><input type="text"     name="country" /> </td> </tr>
 		  <tr><td> zip_code: </td> <td><input type="numeric"  name="zipcode" placeholder="Enter the zipcode..." > </td></tr>
 		  <tr><td> Email_id:</td><td> <input type="Email"    name="emailid" placeholder="Enter the Your Email_id...."> </td></tr>
           <tr><td> Mobile_number:</td><td><input type="number" name="mobileno"  placeholder="Enter Mobile Number..." > </td></tr>
+=======
+		 <tr><td>  country : </td><td><input type="text"     name="country" value="<?php echo$Country_rename ?>" /> </td> </tr>
+		  <tr><td> zip_code: </td> <td><input type="numeric"  name="zipcode" placeholder="Enter the zipcode..." value="<?php echo $Zipcode_rename ?>"> </td></tr>
+		  <tr><td> Email_id:</td><td> <input type="Email"    name="emailid" placeholder="Enter the Your Email_id...."value="<?php echo $Emailid_rename ?>"> </td></tr>
+          <tr><td> Mobile_number:</td><td><input type="number" name="mobileno"  placeholder="Enter Mobile Number..." value="<?php echo $Mobileno_rename ?>"> </td></tr>
+>>>>>>> dc58f877b6542fefd85b5e30f84fc2073e8a8d7e
 		     
 		
 	
 		<tr><td>  <input type="submit" name="submit" value="submit"> </td>
         <td> <input type="reset" name="reset" value="reset"> </td></tr>
+<<<<<<< HEAD
+=======
+        <form action="Update.php" method="post">
+        <tr><td> <input type="submit" name="Update" value="Update"> </td></tr> </form>
+>>>>>>> dc58f877b6542fefd85b5e30f84fc2073e8a8d7e
 		</table>
 		</center>	
 		</fieldset>
@@ -98,3 +127,7 @@ input[type=submit]:hover {
 </html>
 
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> dc58f877b6542fefd85b5e30f84fc2073e8a8d7e
