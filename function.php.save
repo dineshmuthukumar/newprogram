@@ -1,0 +1,15 @@
+<?php
+class dinesh
+{
+ $a;
+ $b;
+function get()
+{
+ $a=20;
+$b=20;
+$c=$a+$b;
+echo $c;
+}
+}
+$obj=new dinesh();
+$obj->get();

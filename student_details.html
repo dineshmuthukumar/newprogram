@@ -1,0 +1,91 @@
+<html>
+<head>
+	
+</head>
+<script>
+ 
+ input[type=text], select {
+     width: 100%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+ }
+  body {
+    color:green;
+    background-color:blue;
+
+  }
+ fieldset,table {
+     display: block;
+
+     margin-left: 2px;
+     margin-right: 2px;
+     padding-top: 0.35em;
+     padding-bottom: 0.625em;
+     padding-left: 0.75em;
+     padding-right: 0.75em;
+     border: 2px groove (internal value);
+ }
+  input[type="submit"], input[type="reset"] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
+ /*input[type=submit]:hover {
+     color: #45a049;
+ }*/
+</script>
+<body>
+
+	<form action="newpage.php" method="POST">
+	<center>
+		<fieldset>
+		<legend>Enter Your vaild Details</legend>
+		<h1>Enter Yours Details</h1>
+		
+	<table>
+
+	<tr> <td><label for="Firstname">FirstName</label> </td> <td><input type='text' name="Firstname" placeholder="Enter the First_name....."> </td></tr>
+	<tr> <td><label for="Lastname">LastName:</label></td><td> <input type="text"  name="Lastname" placeholder="Enter the Lastname...."> </td></tr>
+	 <tr><td>Select a profile_file:</td><td> <input type="file" name="myFile"></td> </tr>
+	<tr> <td>Gender: </td><td><input type="radio" name="gender" value="male"> Male<input type="radio" name="gender" value="female"> Female</td></tr>
+	<tr> <td> Address: </td> <td> <textarea rows="4" cols="50" name="Address">
+Enter text here...</textarea></td> </tr>
+	<tr> <td>City: </td><td> <select name="City">
+  <option value="chennai">Chennai</option>
+  <option value="madurai">Madurai</option>
+  <option value="Trichy">Trichy</option>
+  <option value="Virudhunagar">Virudhunagar</option> 
+     </select> </td></tr>
+     	<tr> <td>State: </td><td> <select name="State">
+       <option value="Tamil_nadu">Tamil_nadu</option>
+       <option value="Karnataka">Karnataka</option>
+       <option value="Andra Pradesh">Andra_pradesh</option>
+       <option value="Kerala">Kerala</option> 
+          </select> </td></tr>
+       <tr><td> Country: </td><td><input type="text" name="Country" placeholder="Enter your Country..."></td> </tr>
+  <tr> <td>Phone_no:</td> <td><input type="number" required name="Phone_no" placeholder="91-9876543210"> </td></tr>
+   <tr> <td>Hobbies </td> <td><input type="checkbox" name="Hobbies" value="listen"> Listening Songs<br>
+  <input type="checkbox" name="Hobbies" value="reading"> Reading books<br>
+  <input type="checkbox" name="Hobbies" value="cricket" checked="checked"> Playing cricket<br> </td></tr>
+  <tr><td>Email_id: </td><td><input type="text" required name="Email_id" placeholder="xyz@gmail.com"></td></tr>
+  <tr><td>Password: </td><td><input type="Password" required name="Password" ></td></tr>
+  <tr><td><input type="submit" name="submit" value="submit">
+  <td><input type="reset"   value="reset"></td></tr>
+  </fieldset>
+	</form>
+
+
+</table>
+</center>
+
+
+	</body>
+</html>
