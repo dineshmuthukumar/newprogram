@@ -1,6 +1,5 @@
 
 <?php
-
 ini_set('display_errors', 1);
 
    $id=$_GET['id'];
@@ -23,8 +22,7 @@ ini_set('display_errors', 1);
 	$showdetails=mysqli_query($conn,"SELECT * FROM student_info where ID='$id'");
 	echo "<pre>";
 
-	while($one_row=mysqli_fetch_array($showdetails)){
-
+	while($one_row=mysqli_fetch_assoc($showdetails)){
 
 		$Firstname_rename=$one_row['Firstname'];
 		$Lastname_rename=$one_row['Lastname'];
@@ -34,16 +32,14 @@ ini_set('display_errors', 1);
 		$City_rename=$one_row['City'];
 		$State_rename=$one_row['State'];
 		$Country_rename=$one_row['Country'];
-
 		$Zipcode_rename=$one_row['Zip_code'];
-
-		$Zipcode_rename=$one_row['zip_code'];
-
 		$Emailid_rename=$one_row['Email'];
 		$Mobileno_rename=$one_row['Mobile_no'];
 
 	}
 
 header("Location: newform.php?Firstname_rename=$Firstname_rename&Lastname=$Lastname_rename&Gender=$Gender_rename&Borndate_rename=$Borndate_rename&Address_rename=$Address_rename&City_rename=$City_rename&State_rename=$State_rename&Country_rename=$Country_rename&Zipcode_rename=$Zipcode_rename&Emailid_rename=$Emailid_rename&Mobileno_rename=$Mobileno_rename");
+
+
 
 ?>

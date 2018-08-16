@@ -61,8 +61,8 @@ input[type=submit]:hover {
          <tr> <td>LastName</label></td><td> <input type="text"  name="Lastname" placeholder="Enter the Lastname...." value="<?php echo $_GET['Lastname_rename'] ?>" /> </td></tr>
 
           <tr><td>Select a profile_file:</td><td> <input type="file" name="myFile"></td> </tr>
-          <tr><td> Gender: <?php echo $_GET['Gender_rename']; ?></td><td> <input type="radio" name="gender" value="male" <?php echo ($_GET['Gender_rename']=='Male')?'checked':'' ?>   >  male
-         <input type="radio"  name="gender" value="female" <?php echo ($_GET['Gender_rename']=='female')?'checked':'' ?> > female </td> </tr>
+          <tr><td> Gender: <?php echo $_GET['Gender_rename']; ?></td><td> <input type="radio" name="gender" value="male" <?php echo if($_GET['Gender_rename']=='Male')?'checked':'' ?>   >  male
+         <input type="radio"  name="gender" value="female" <?php echo if($_GET['Gender_rename']=='female')?'checked':'' ?> > female </td> </tr>
       <tr><td> Born Dater: </td> <td> <input type="date" name="borndate" max=2 Placeholder="03-01-1996" value="<?php  echo strftime('%Y-%m-%d',
   strtotime($_GET['Borndate_rename'])); ?>" /> </td></tr>
                                      
@@ -87,7 +87,9 @@ input[type=submit]:hover {
 	
 		<tr><td>  <input type="submit" name="submit" value="submit"> </td>
         <td> <input type="reset" name="reset" value="reset"> </td></tr>
-        <td> <input type="submit" name="">
+        <form>
+        <tr ><td> <input type="submit" name="update" value="update"> </td></tr> </form>
+        <tr><td><a href="newpage.php">Edit</a></td> </tr>
 		</table>
 		</center>	
 		</fieldset>
