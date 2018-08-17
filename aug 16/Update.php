@@ -32,14 +32,13 @@ $ID=$_POST['ID'];
  $Born_date=$_POST['borndate'];
  $Address=$_POST['Address'];
  $City=$_POST['City'];
- $State1=explode(',',$_POST['State']);
+ $State=implode(",",$_POST["State"]);
  $Country=$_POST['country'];
  $Zip_code=$_POST['zipcode'];
  $Emailid=$_POST['emailid'];
  $Mobileno=$_POST['mobileno'];
  echo $Firstname."<br>"; 
-$State = array_map('trim', $State1);
-die(); 
+//$State = array_map('trim', $State1);
  $query="UPDATE student_info SET Firstname='$Firstname',Lastname='$Lastname',Gender='$Gender',Born_date='$Born_date',Address='$Address',City='$City',State='$State',Country='$Country',Zip_code='$Zip_code',Email='$Emailid',Mobile_no='$Mobileno' WHERE ID='$ID'";
  $update_query=mysqli_query($conn,$query);
 if(!$update_query)

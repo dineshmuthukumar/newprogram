@@ -1,7 +1,7 @@
 
 <?php
-echo "<pre>";
-print_r($_POST);
+//echo "<pre>";
+//print_r($_POST);
 
 $servername = "localhost";
 $username = "root";
@@ -132,7 +132,7 @@ while ($row = mysqli_fetch_assoc($show)) {
  <body>
   <form action="newform.php">
   <table>
-    <tr><td><input type="Submit" name="Home" value="Home" float="right"> </td></tr>
+    <tr><td><input type="Submit" name="Home" value="Home"  <ul class="nav nav-list primary left-menu" float="right"> </td></tr>
   </table> 
  </body>
  </html>
