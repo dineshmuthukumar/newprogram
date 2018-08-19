@@ -8,7 +8,7 @@
 </html>
 <?php
 session_start();
-ini_set('display_errors', 1);
+ini_set('display_errors',1);
 $name=$_POST['Username'];
 $Pwd=$_POST['Password'];
 
@@ -22,7 +22,7 @@ $conn=mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "success";
+//echo "success";
 $query="SELECT Username,Password FROM student_info WHERE Username='$name' && Password='$Pwd'";
 //echo $query;
 $check_query=mysqli_query($conn,$query);
@@ -37,21 +37,10 @@ if (mysqli_num_rows($check_query) > 0)
         header('location:Remainderadd.php');
     }
 } else {
-    echo "0 results";
+	echo "Username and Password Invaild"."<br>";
+	echo "Please Register in below link";
+	echo "<a href='Homepage.php'> Home_page</a>";
+    //echo "0 results";
 }
 
 ?>
-
-
-<!DOCTYPE html>
- <html>
- <head>
-   <title></title>
- </head>
- <body>
-  <form action="Endpage.php">
-  <table>
-    <tr><td><input type="Submit" name="Home" value="View"  float="right"> </td></tr>
-  </table> 
- </body>
- </html>

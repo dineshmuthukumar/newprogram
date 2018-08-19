@@ -7,7 +7,7 @@
 <legend>Enter the Details</legend>
 <table>
 	<center>
-	<form action="new.php" method="POST">
+	<form action="newuser.php" method="POST">
 <tr><td> Name :</td><td><input type="text" name="name" placeholder="Enter the Name...."></td></tr>
 <tr><td> Gender :</td><td><input type="radio" name="gender" value="female"> Female</td><td><input type="radio" name="gender" value=male>Male</td></tr>
 <tr><td> Address: </td> <td><input type="Text" name="Address" placeholder="Enter the Address..."></td></tr>
@@ -19,6 +19,7 @@
 <tr><td> Username: </td><td><input type="text" name="Username" placeholder="Enter the Name..."></td></tr>
 <tr><td> Password: </td><td><input type="Password" name="Password" ></td></tr>
 <tr><td><input type="submit" name="Submit" value="submit"></td></tr>
+<tr><td><h4>already User Click Login</h4></td></tr>
 <tr><td><a href="Login.php">Login </a></td></tr>
 </form>
 </center>

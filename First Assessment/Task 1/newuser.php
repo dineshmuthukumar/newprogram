@@ -34,6 +34,9 @@ $insert=mysqli_query($conn,$query);
  }
  echo "success";
  echo "your Registration is Successfully";
+ echo "please Check Login link";
+ echo "<a href="Login.php">Login</a>"
+
 }
 ?>
 

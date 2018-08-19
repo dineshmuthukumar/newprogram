@@ -4,6 +4,7 @@
 	<title>Login_page</title>
 </head>
 <body>
+	<h2>User_Login</h2>
 <table>
 	<form action="welcome.php" method="POST">
 <tr><td>USERNAME:</td><td><input type="text" name="Username"></td></tr>
@@ -13,6 +14,3 @@
 </body>
 </html>
 
-<?php
-console.log(strftime('%Y-%m-%d',strtotime("1.8088888888889hours and Minuties remaining")));
-?>

@@ -21,24 +21,17 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 //echo "success";
-
-$query="INSERT INTO Remainder_Llist(name,status) VALUES('$name','$time2')";
+if($_POST['submit'])
+{
+$query="INSERT INTO Remainder_List(name,status) VALUES('$name','$time2')";
+//echo $query;
+//die();
 $insert=mysqli_query($conn,$query);
 if(!$insert)
 {
-	die();
+	//echo "data is not insert";
 }
-echo "success";
-$time1 = date("g:i:s");
-//echo $time1."<br>";
-	$time1 = strtotime("1/1/2018 $time1");
-	$time2 = strtotime("1/1/2018 $time2");
-$difference = ($time2 - $time1)/3600;
-$difference=$difference."hours and Minuties remaining";
-if($difference<0)
-{
-	$difference="Expired";
-}
+//echo "success";
 }
 ?>
 
@@ -47,38 +40,54 @@ if($difference<0)
 <head>
 	<title></title>
 </head>
+
+<script >
+	
+
+</script>
 <body>
+	<center>
 	<h2>Remainder_List</h2>
-<a href="Remainderlist.php"> Add List</a>
-<a href="Check.php"> Check Session </a>
+	<table>
+<tr><td><a href='Remainderlist.php'> Add List</a></td><td><a href='Homepage.php'> Home_page</a></td></tr>
+</table>
+</center>
 </body>
 </html>
 
 
 <?php
-  
- echo "<table border='1' width=300 height=300>
+   echo "<center>";
+ echo "<table border='1' width=400 height=400>
 
  <tr>
 
  <th>Name</th>
  <th>Time</th>
  </tr>";
- $show=mysqli_query($conn,"SELECT * FROM Remainder_List");
+ $show=mysqli_query($conn,"SELECT * FROM Remainder_List"); # fetch all lines
 while ($row = mysqli_fetch_assoc($show)) {
 	echo "<tr>";
 
 	 echo "<td>" . $row['name'] . "</td>";
 
-	 echo "<td>" . $row['Status'] . "</td>";
-	 echo "</tr>";
+	 //echo "<td>" . $row['Status'] . "</td>";
+	 //echo "</tr>";
 	 $time=$row['Status'];
 
-  
+	 $time1 = date("g:i:s"); # curent time
+	 $time1 = strtotime("1/1/2018 $time1"); #format date
+	$time2 = strtotime("1/1/2018 $time");
+$difference = ($time2 - $time1)/3600;
+$difference=$difference."hours and Minuties remaining";
+if($difference<0)
+{
+	$difference="Expired";
+}
+
+echo "<td>" . $difference . "</td>";
+	 echo "</tr>";
+
+   echo "</center>";
    }
-
-   //header('refresh:Update.php');
-
-
-
 ?>
